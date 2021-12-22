@@ -17,7 +17,9 @@ Faiq Shahmmy bin Shalizam | 1818897 | @faiqshahmy
 This project is designed for delivery laundry services, where the laundries can be delivered without waiting or people who don't have time for walk-in. This application can solve the problem, just pay for the delivery by cashless payment and you are done.  
 
 ## 2.0 Objective 
-> - The function of WashNClean application is to ease the
+> - The function of WashNClean application is to ease the working people who doesn't have time to deliver and pick-up their laundry.
+> - WashNClean also using the method of cashless payment to prevent any difficulties or mistakes during the transaction.
+> - The booking date of delivering and picking up the laundry through our application also according to the customer's time flexibility to prevent any shortcome of unavailable or clash time between the customer and the laundry services.
 
 ## 3.0 Features and Functionalities
 
