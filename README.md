@@ -61,7 +61,7 @@ The features and functionalities that we include inside our WashNClean applicati
 Login and Register
 ![login_register](https://user-images.githubusercontent.com/55783309/147570434-6226ade6-ee23-44b3-9ac0-1dac23495b0c.jpg)
 
-Homepage
+Homepage  
 ![Homepage](https://user-images.githubusercontent.com/50144073/147585581-5ce4e586-33d0-4464-96a7-984ee4d53d36.jpg)
 
 Order Form  
