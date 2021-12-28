@@ -55,12 +55,16 @@ This project is designed for delivery laundry services, where the laundries can 
 ## 5.0 Sequence Diagram of The Proposed Application
 Login and Register
 ![login_register](https://user-images.githubusercontent.com/55783309/147570434-6226ade6-ee23-44b3-9ac0-1dac23495b0c.jpg)
+
 Homepage
 ![Homepage](https://user-images.githubusercontent.com/50144073/147578632-5bd488dc-8807-40e4-877b-d87d38fedbca.png)
+
 Order Form
 ![orderform](https://user-images.githubusercontent.com/50144073/147578677-32ea0078-941e-4c6b-b992-94f8b42407c4.png)
+
 Location
 ![location](https://user-images.githubusercontent.com/50144073/147578713-964ce462-4640-4a67-a7e9-007eabe63ed6.png)
+
 Tracking
 ![tracking](https://user-images.githubusercontent.com/50144073/147578745-9aaecc0c-79ec-4021-96c7-d9802f9a19ae.png)
 
