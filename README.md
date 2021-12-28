@@ -53,5 +53,7 @@ This project is designed for delivery laundry services, where the laundries can 
   - Search API is used to let user use the search function to do a local search within the application
 
 ## 5.0 Sequence Diagram of The Proposed Application
+Login and Register
+![login_register](https://user-images.githubusercontent.com/55783309/147570434-6226ade6-ee23-44b3-9ac0-1dac23495b0c.jpg)
 
 ## 6.0 References
