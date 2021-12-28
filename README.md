@@ -22,6 +22,10 @@ This project is designed for delivery laundry services, where the laundries can 
 > - The booking date of delivering and picking up the laundry through our application also according to the customer's time flexibility to prevent any shortcome of unavailable or clash time between the customer and the laundry services.
 
 ## 3.0 Features and Functionalities
+The features and functionalities that we include inside our WashNClean application are mostly related with laundry services and how we want to implemented the delivery services of laundry into the application so our application is flexibility and simple to use even to someone who not tech-savvy. Below are the features and functionalities that we put inside our application:
+> - **Site Search** : we proposed to put the Site Search into our WashNClean application to delight our potential user for easy searchinf by using keyword that suitable with something that they desired to search inside our application.
+> - **Third-party authentication** : We proposed to use the third-party authentication like Facebook, Google when user try to login to our application so there are less complicated things like users tend to forgot their own password happened.
+> - **Simple navigation** : We proposed such simple and easy navigation where all the navigation button to other screen are at the same places so users will not get confuse while learning how to use our app and also we use basic color as the background to minimize the complexity and messy of our application.
 
 ## 4.0 Screen Navigation and Components
 ## Screen Navigation Diagram
