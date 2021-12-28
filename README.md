@@ -24,7 +24,7 @@ This project is designed for delivery laundry services, where the laundries can 
 ## 3.0 Features and Functionalities
 
 ## 4.0 Screen Navigation and Components
-# Screen Navigation Diagram
+## Screen Navigation Diagram
 ![Untitled Diagram DarkMode drawio](https://user-images.githubusercontent.com/43456427/147541526-516ac0e7-adae-4859-a9a6-94580cef24c8.png)
 
 # Components Labelling
@@ -40,7 +40,7 @@ This project is designed for delivery laundry services, where the laundries can 
 > ![WashNClean_label-Feedback](https://user-images.githubusercontent.com/43456427/147542269-dc60ddd6-b9e6-4cd5-9361-f5449cb51de2.jpg)
 > ![WashNClean_label-Profile](https://user-images.githubusercontent.com/43456427/147542315-ad473495-60d9-4574-a488-d58833147025.jpg)
 
-# API
+## API
 - Firebase Authentication
   - Firebase Authentication is used to handle user Login and Sign Up functionality
 - Firebase Firestore
