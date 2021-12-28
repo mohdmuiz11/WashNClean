@@ -60,14 +60,14 @@ The features and functionalities that we include inside our WashNClean applicati
 ## 5.0 Sequence Diagram of The Proposed Application
 Login and Register
 ![login_register](https://user-images.githubusercontent.com/55783309/147570434-6226ade6-ee23-44b3-9ac0-1dac23495b0c.jpg)
-
-Homepage![Homepage](https://user-images.githubusercontent.com/50144073/147578632-5bd488dc-8807-40e4-877b-d87d38fedbca.png)
-
-Order Form![orderform](https://user-images.githubusercontent.com/50144073/147578677-32ea0078-941e-4c6b-b992-94f8b42407c4.png)
-
-Location![location](https://user-images.githubusercontent.com/50144073/147578713-964ce462-4640-4a67-a7e9-007eabe63ed6.png)
-
-Tracking![tracking](https://user-images.githubusercontent.com/50144073/147578745-9aaecc0c-79ec-4021-96c7-d9802f9a19ae.png)
+Homepage
+![Homepage](https://user-images.githubusercontent.com/50144073/147585581-5ce4e586-33d0-4464-96a7-984ee4d53d36.jpg)
+Order Form
+![orderform](https://user-images.githubusercontent.com/50144073/147585604-e5dc1a78-ce7c-46da-9ca6-2c7f6267a133.jpg)
+Location
+![location](https://user-images.githubusercontent.com/50144073/147585633-3c5530cf-22e4-44f1-a970-9b96a7fa2a33.jpg)
+Tracking
+![tracking](https://user-images.githubusercontent.com/50144073/147585650-42db6522-99b6-4280-994b-58402239d092.jpg)
 
 
 
