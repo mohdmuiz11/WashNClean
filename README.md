@@ -30,7 +30,9 @@ The features and functionalities that we include inside our WashNClean applicati
 
 ## 4.0 Screen Navigation and Components
 ## Screen Navigation Diagram
-![Untitled Diagram DarkMode drawio](https://user-images.githubusercontent.com/43456427/147541526-516ac0e7-adae-4859-a9a6-94580cef24c8.png)
+![Untitled Diagram DarkMode](https://user-images.githubusercontent.com/43456427/147627013-ef1b3b94-ff58-40dc-87f9-c6e9f37fff85.jpg)
+
+
 
 # Components Labelling
 > ![WashNClean_label-Login](https://user-images.githubusercontent.com/43456427/147541725-228753f1-f205-4cf8-9655-2304716749d3.jpg)
