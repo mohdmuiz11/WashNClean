@@ -70,7 +70,7 @@ The features and functionalities that we include inside our WashNClean applicati
 ![orderform](https://user-images.githubusercontent.com/50144073/147585604-e5dc1a78-ce7c-46da-9ca6-2c7f6267a133.jpg)
 
 > - Location  
-![location](https://user-images.githubusercontent.com/50144073/147585633-3c5530cf-22e4-44f1-a970-9b96a7fa2a33.jpg)
+![location](https://user-images.githubusercontent.com/50144073/147634780-b97201c5-be3f-4efd-9d06-f5c176cb94a6.jpg)
 
 > - Tracking  
 ![tracking](https://user-images.githubusercontent.com/50144073/147585650-42db6522-99b6-4280-994b-58402239d092.jpg)
