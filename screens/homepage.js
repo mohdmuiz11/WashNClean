@@ -8,7 +8,7 @@ import Weather from './Weather';
 
 
 // const API = 'https://api.openweathermap.org/data/2.5/weather?'
-
+////Nor Bedriah Binti Munadi
 function homepage ({navigation}){  
   // const API_KEY = '68095a5bd370e9e7cda5f9a01a21c82c';
   // const [location, setLocation] = useState([]);   //based on current/device location
