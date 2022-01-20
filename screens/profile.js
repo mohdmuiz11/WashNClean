@@ -4,6 +4,7 @@ import {stylesWNC} from '../screens/stylesWNC';
 import { useNavigation } from '@react-navigation/native';
 import homepage from './homepage';
 
+//Nor Bedriah Binti Munadi
 const Profile = () => {  
 
     const navigation = useNavigation()
