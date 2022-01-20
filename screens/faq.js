@@ -1,7 +1,8 @@
 import React from 'react';
 import {Text, View, ScrollView} from 'react-native';
 import { stylesWNC } from '../screens/stylesWNC';
- 
+
+////Nor Bedriah Binti Munadi
 class Faq extends React.Component {  
   
     render() {
