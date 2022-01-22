@@ -11,9 +11,10 @@ import {
 } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { initializeApp } from "firebase/app";
 import { firebaseConfig } from "../firebase";
+import { getFirestore, setDoc, doc, collection, addDoc} from 'firebase/firestore';
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { useNavigation } from "@react-navigation/native";
 
 function SignUpScreen() {
@@ -24,6 +25,7 @@ function SignUpScreen() {
 
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app);
+  const firestore = getFirestore(app);
 
   const navigation = useNavigation()
 
@@ -44,8 +46,27 @@ function SignUpScreen() {
             console.log("Account Created");
             const user = userCredential.user;
             console.log(user);
+            const data = {
+              username: signupUsername,
+              email: signupemail,
+              uid: auth.currentUser.uid,
+            }
+            const userProfile = doc(firestore, 'users', auth.currentUser.email)
+            const docData = {
+              'username': signupUsername,
+              'email': auth.currentUser.email,
+              'uid': auth.currentUser.uid,
+            }
+            setDoc(userProfile, docData)
+            .then(() => {
+              console.log('User Profile Added')
+            }).catch((error) => {
+              console.log(error);
+              Alert.alert(error.message);
+            })
+            
           })
-          .catch(error => {
+          .catch((error) => {
             console.log(error);
             Alert.alert(error.message);
           });

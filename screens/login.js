@@ -9,7 +9,6 @@ import {
   ActivityIndicator,
 } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
-
 import {
   getAuth,
   signInWithEmailAndPassword,
@@ -34,7 +33,7 @@ function LoginScreen() {
         const user = userCredential.user;
         console.log(user);
       })
-      .catch(error => {
+      .catch((error) => {
         console.log(error);
         Alert.alert(error.message);
       });
