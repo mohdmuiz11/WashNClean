@@ -81,9 +81,6 @@ function homepage ({navigation}){
         </Row> 
         </Col>
       </Grid>
-
-  {/* syntax for Logo WashNClean part */}
-  <Image style={stylesWNC.logoWNC} source={require('../assets/laundryLogo.png')} />
   
   {/* syntax for navigation at the bottom part */}
   {/* non-navigation syntax because here already homepage screen */}
