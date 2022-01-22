@@ -1,31 +1,15 @@
-import React, {useState, useEffect} from 'react';
-import {Text, View, Image, TouchableOpacity, ActivityIndicator} from 'react-native';
+import React from 'react';
+import {Text, View, Image, TouchableOpacity} from 'react-native';
 import {stylesWNC} from '../screens/stylesWNC';
 import { Col, Row, Grid } from 'react-native-easy-grid';
+import { FontAwesome5 } from '@expo/vector-icons'; 
 import profile from './profile';
 import Faq from './faq';
-// import Weather from './Weather';
+import Weather from './Weather';
 
 
-// const API = 'https://api.openweathermap.org/data/2.5/weather?'
-////Nor Bedriah Binti Munadi
 function homepage ({navigation}){  
-  // const API_KEY = '68095a5bd370e9e7cda5f9a01a21c82c';
-  // const [location, setLocation] = useState([]);   //based on current/device location
-  // const [daily, setDaily] = useState([]);         //based on daily weather
-  // const [error, setError] = useState(null);       // check if the weather display or give error
- 
-  // const weatherIcons = {
-  //   Sun: "Sunny",
-  //   Clouds: "Cloudy",
-  //   Rain: "Rain",
-  //   Atmosphere: "cloudy-gusts",
-  //   Snow: "Snow",
-  //   Drizzle: "Light Rain",
-  //   Thunderstorm: "Lightning",
-  // };
-
-
+  
     return (
 <View style={stylesWNC.container}>
   {/* syntax for big title at the top of the screen for WashNClean */}
@@ -36,11 +20,10 @@ function homepage ({navigation}){
     <Image style={stylesWNC.FAQ} source={require('../assets/faq.png')}/>
   </TouchableOpacity>
 
-  {/* syntax for Site Search part */}
-
-
   {/* syntax for Weather Snippets part */}
-
+  <TouchableOpacity style={stylesWNC.SWeather} onPress={() => navigation.navigate(Weather)}>
+  <FontAwesome5 name="cloud-sun" size={80} color="black" />
+  </TouchableOpacity>
 
   {/* syntax for WashNClean Updated Price part */}
   <Text style={stylesWNC.textTitle1}>Updated Price For 2022</Text>
@@ -100,7 +83,7 @@ function homepage ({navigation}){
       </Grid>
 
   {/* syntax for Logo WashNClean part */}
-  {/* <Image style={stylesWNC.logoWNC} source={require('../assets/laundryLogo.png')} /> */}
+  <Image style={stylesWNC.logoWNC} source={require('../assets/laundryLogo.png')} />
   
   {/* syntax for navigation at the bottom part */}
   {/* non-navigation syntax because here already homepage screen */}
