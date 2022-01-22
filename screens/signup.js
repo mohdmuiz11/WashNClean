@@ -51,7 +51,7 @@ function SignUpScreen() {
           });
       }
     }
-    navigation.navigate("Homepage");
+    navigation.replace("Homepage");
   };
 
   //   registerUser = () => {

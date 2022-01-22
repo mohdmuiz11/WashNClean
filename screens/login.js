@@ -38,7 +38,7 @@ function LoginScreen() {
         console.log(error);
         Alert.alert(error.message);
       });
-      navigation.navigate("Homepage")
+      navigation.replace("Homepage")
   };
 
 //   userLogin = () => {
