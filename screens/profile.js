@@ -1,14 +1,17 @@
 import React from 'react';
-import {Text, View, Image, TouchableOpacity} from 'react-native';
+import {Text, View, Image, TouchableOpacity, Alert} from 'react-native';
 import {stylesWNC} from '../screens/stylesWNC';
 import { useNavigation } from '@react-navigation/native';
-import homepage from './homepage';
+import { getAuth} from "firebase/auth";
+import { firebaseConfig } from "../firebase";
+import { initializeApp } from "firebase/app";
 
 //Nor Bedriah Binti Munadi
 const Profile = () => {  
 
     const navigation = useNavigation()
-    const navigation = useNavigation()
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
 
     const handleSginOut = () =>
     auth
@@ -23,8 +26,8 @@ const Profile = () => {
   {/* syntax for big title at the top of the screen for WashNClean */}
   <Text style={stylesWNC.TopTitle}>WashNClean</Text>
 
-<Text style={{top:'10%', left:'-40%', fontSize:20}}>Email: </Text>
-{/* <Text>{auth.currentUser?.email}</Text> */}
+<Text style={{top:'10%', left:'-30%', fontSize:20}}>Email: </Text>
+<Text style={{top:'6%', left:'20%', fontSize:20}}>{auth.currentUser?.email}</Text>
 
 <TouchableOpacity
          style={stylesWNC.buttonSignOut}
