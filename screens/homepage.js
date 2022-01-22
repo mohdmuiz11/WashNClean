@@ -100,7 +100,7 @@ function homepage ({navigation}){
     <Image style={stylesWNC.Tracker} source={require('../assets/track.png')}/>
   </TouchableOpacity>
   
-  <TouchableOpacity style={stylesWNC.CProfile} onPress={() => navigation.navigate(profile)}>
+  <TouchableOpacity style={stylesWNC.CProfile} onPress={() => navigation.navigate("Profile")}>
     <Text style={stylesWNC.navtext}>Profile</Text>
     <Image style={stylesWNC.Profile} source={require('../assets/profile.png')}/>
   </TouchableOpacity>

@@ -6,6 +6,7 @@ container: {
     backgroundColor: '#ffffff',
     flex: 1,
     alignItems: 'center',
+    alignContent: "space-around"
 },
 TopTitle: {
     fontSize: 40,
@@ -21,6 +22,7 @@ textTitle1: {
     fontWeight: 'bold',
     textAlign: 'center',
     top: '30%',
+    marginBottom: 25,
 },
 texttable: {
     fontSize: 15,
@@ -35,6 +37,7 @@ tableLayout: {
 },
 gridLayout: {
     top: '55%',
+    alignContent: "center",
 },
 logoWNC: {
     top: '150%',
@@ -204,7 +207,7 @@ buttonSignOut: {
     borderBottomRightRadius: 10,
     width: 100,
     height: 30,
-    top: '45%',
+    top: '40%',
 },
 textSignOut:{
     fontSize: 20

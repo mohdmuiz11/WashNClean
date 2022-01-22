@@ -22,6 +22,7 @@ function SignUpScreen() {
   const [signuppassword, setSignUpPassword] = React.useState("");
   const [signuprepassword, setSignUpRePassword] = React.useState("");
   const [signupUsername, setSignUpUsername] = React.useState("");
+  const [signupAddress, setSignUpAddress] = React.useState("");
 
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app);
@@ -34,7 +35,8 @@ function SignUpScreen() {
       signupUsername === "" &&
       signupemail === "" &&
       signuppassword === "" &&
-      signuppassword === ""
+      signuppassword === "" &&
+      signupAddress === ""
     ) {
       Alert.alert("Enter Details to Sign Up!");
     } else {
@@ -56,6 +58,7 @@ function SignUpScreen() {
               'username': signupUsername,
               'email': auth.currentUser.email,
               'uid': auth.currentUser.uid,
+              'address': signupAddress,
             }
             setDoc(userProfile, docData)
             .then(() => {
@@ -125,6 +128,15 @@ function SignUpScreen() {
         }
         secureTextEntry={true}
       />
+      <TextInput
+        style={styles.inputView}
+        multiline={true}
+        numberOfLines={3}
+        placeholder="Address"
+        placeholderTextColor= "#00000073"
+        value={signupAddress}
+        onChangeText={(val) => setSignUpAddress(val)}
+      />
 
       <TouchableOpacity
         style={styles.signupButton}
@@ -171,6 +183,7 @@ const styles = StyleSheet.create({
     paddingRight: 20,
     textAlign: "center",
     fontWeight: "bold",
+    fontSize: 18,
   },
 
   forgot_button: {
