@@ -4,7 +4,7 @@ import {stylesWNC} from '../screens/stylesWNC';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import profile from './profile';
 import Faq from './faq';
-import Weather from './Weather';
+// import Weather from './Weather';
 
 
 // const API = 'https://api.openweathermap.org/data/2.5/weather?'
@@ -100,7 +100,7 @@ function homepage ({navigation}){
       </Grid>
 
   {/* syntax for Logo WashNClean part */}
-  <Image style={stylesWNC.logoWNC} source={require('../assets/laundryLogo.png')} />
+  {/* <Image style={stylesWNC.logoWNC} source={require('../assets/laundryLogo.png')} /> */}
   
   {/* syntax for navigation at the bottom part */}
   {/* non-navigation syntax because here already homepage screen */}
