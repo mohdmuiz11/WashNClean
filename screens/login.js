@@ -26,8 +26,14 @@ function LoginScreen() {
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app);
 
-  const handleSignIn = () => {
-    signInWithEmailAndPassword(auth, email, password)
+  async function handleSignIn() {
+    if (
+      email === "" &&
+      password === ""
+    ) {
+      Alert.alert("Enter Details to Log In!");
+    } else {
+    await signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         console.log("Signed In");
         const user = userCredential.user;
@@ -38,6 +44,7 @@ function LoginScreen() {
         Alert.alert(error.message);
       });
       navigation.replace("Homepage")
+    }
   };
 
 //   userLogin = () => {
@@ -64,17 +71,20 @@ function LoginScreen() {
 
   return (
     <View style={styles.container}>
+
+      <Text style={styles.washnclean_logo}>WashNClean</Text>
+
       <TextInput
         style={styles.inputView}
         placeholder="Email"
-        placeholderTextColor="black"
+        placeholderTextColor="#00000073"
         value={email}
         onChangeText={(val) => setEmail(val)}
       />
       <TextInput
         style={styles.inputView}
         placeholder="Password"
-        placeholderTextColor="black"
+        placeholderTextColor="#00000073"
         value={password}
         onChangeText={(val) => setPassword(val)}
         secureTextEntry={true}
@@ -105,18 +115,31 @@ const styles = StyleSheet.create({
     flex: 1,
     alignContent: "center",
     justifyContent: "center",
+    backgroundColor: "#2e9cc5",
+  },
+
+  washnclean_logo: {
+    fontSize: 60,
+    textAlign: "center",
+    marginBottom: 15,
+    fontStyle: "normal",
+    fontWeight: "bold",
+    color: "white",
   },
 
   inputView: {
     backgroundColor: "white",
-    borderRadius: 30,
-    width: "70%",
-    height: 45,
-    marginBottom: 20,
-    marginLeft: 50,
-    marginRight: 50,
+    borderRadius: 20,
+    width: "80%",
+    height: 55,
+    marginBottom: 10,
+    marginLeft: 40,
+    marginRight: 40,
     alignItems: "center",
     paddingLeft: 20,
+    paddingRight: 20,
+    textAlign: "center",
+    fontWeight: "bold",
   },
 
   // TextInput: {
@@ -133,18 +156,20 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     alignItems: "center",
     textAlign: "center",
+    fontWeight: "bold",
+    color: "#36565d"
   },
 
   loginButton: {
     width: "80%",
-    borderWidth: 1,
-    borderColor: "black",
+    borderWidth: 3,
+    borderColor: "white",
     borderRadius: 25,
     height: 50,
     alignItems: "center",
     justifyContent: "center",
     marginTop: 25,
-    backgroundColor: "#FF1493",
+    backgroundColor: "#0000ff",
     marginLeft: 40,
     marginRight: 40,
   },
@@ -152,16 +177,20 @@ const styles = StyleSheet.create({
   loginText: {
     fontWeight: "bold",
     color: "#ffffff",
+    fontSize: 18,
   },
 
   loginorsignup: {
     marginTop: 10,
     textAlign: "center",
+    color: "#36565d",
+    fontWeight: "bold",
   },
 
   toSignup: {
-    color: "yellow",
+    color: "#f5e1a1",
     textAlign: "center",
+    fontWeight: "bold",
   },
 });
 export default LoginScreen

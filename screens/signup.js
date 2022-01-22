@@ -14,7 +14,7 @@ import { TouchableOpacity } from "react-native-gesture-handler";
 import { initializeApp } from "firebase/app";
 import { firebaseConfig } from "../firebase";
 import { getFirestore, setDoc, doc, collection, addDoc} from 'firebase/firestore';
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
 import { useNavigation } from "@react-navigation/native";
 
 function SignUpScreen() {
@@ -29,7 +29,7 @@ function SignUpScreen() {
 
   const navigation = useNavigation()
 
-  const handleSignUp = () => {
+  async function handleSignUp() {
     if (
       signupUsername === "" &&
       signupemail === "" &&
@@ -41,7 +41,7 @@ function SignUpScreen() {
       if (signuprepassword != signuppassword) {
         Alert.alert("Please Enter the same password!");
       } else {
-        createUserWithEmailAndPassword(auth, signupemail, signuppassword)
+        await createUserWithEmailAndPassword(auth, signupemail, signuppassword)
           .then((userCredential) => {
             console.log("Account Created");
             const user = userCredential.user;
@@ -71,8 +71,8 @@ function SignUpScreen() {
             Alert.alert(error.message);
           });
       }
-    }
-    navigation.replace("Homepage");
+      navigation.replace("Homepage"); 
+    }    
   };
 
   //   registerUser = () => {
@@ -89,24 +89,26 @@ function SignUpScreen() {
   //     }
   return (
     <View style={styles.container}>
+      
+      <Text style={styles.washnclean_logo}>WashNClean</Text>
       <TextInput
         style={styles.inputView}
         placeholder="Name"
-        placeholderTextColor="black"
+        placeholderTextColor= "#00000073"
         value={signupUsername}
         onChangeText={(val) => setSignUpUsername(val)}
       />
       <TextInput
         style={styles.inputView}
         placeholder="Email"
-        placeholderTextColor="black"
+        placeholderTextColor="#00000073"
         value={signupemail}
         onChangeText={(val) => setSignupEmail(val)}
       />
       <TextInput
         style={styles.inputView}
         placeholder="Password"
-        placeholderTextColor="black"
+        placeholderTextColor="#00000073"
         value={signuppassword}
         onChangeText={(val) =>
           setSignUpPassword(val)
@@ -116,7 +118,7 @@ function SignUpScreen() {
       <TextInput
         style={styles.inputView}
         placeholder="Re-enter Password"
-        placeholderTextColor="black"
+        placeholderTextColor="#00000073"
         value={signuprepassword}
         onChangeText={(val) =>
           setSignUpRePassword(val)
@@ -144,18 +146,31 @@ const styles = StyleSheet.create({
     flex: 1,
     alignContent: "center",
     justifyContent: "center",
+    backgroundColor: "#2e9cc5",
+  },
+
+  washnclean_logo: {
+    fontSize: 60,
+    textAlign: "center",
+    marginBottom: 15,
+    fontStyle: "normal",
+    fontWeight: "bold",
+    color: "white",
   },
 
   inputView: {
     backgroundColor: "white",
-    borderRadius: 30,
-    width: "90%",
-    height: 45,
+    borderRadius: 20,
+    width: "80%",
+    height: 55,
     marginBottom: 10,
-    marginLeft: 15,
-    marginRight: 15,
+    marginLeft: 40,
+    marginRight: 40,
     alignItems: "center",
     paddingLeft: 20,
+    paddingRight: 20,
+    textAlign: "center",
+    fontWeight: "bold",
   },
 
   forgot_button: {
@@ -167,14 +182,14 @@ const styles = StyleSheet.create({
 
   signupButton: {
     width: "80%",
-    borderWidth: 1,
+    borderWidth: 3,
+    borderColor: "white",
     borderRadius: 25,
-    borderColor: "black",
     height: 50,
     alignItems: "center",
     justifyContent: "center",
     marginTop: 25,
-    backgroundColor: "#FF1493",
+    backgroundColor: "#0000ff",
     marginLeft: 40,
     marginRight: 40,
   },
@@ -182,16 +197,20 @@ const styles = StyleSheet.create({
   signupText: {
     fontWeight: "bold",
     color: "#ffffff",
+    fontSize: 18,
   },
 
   loginorsignup: {
     marginTop: 10,
     textAlign: "center",
+    color: "#36565d",
+    fontWeight: "bold",
   },
 
   toLogin: {
-    color: "yellow",
+    color: "#f5e1a1",
     textAlign: "center",
+    fontWeight: "bold",
   },
 });
 export default SignUpScreen
