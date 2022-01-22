@@ -8,11 +8,29 @@ import homepage from './homepage';
 const Profile = () => {  
 
     const navigation = useNavigation()
+    const navigation = useNavigation()
+
+    const handleSginOut = () =>
+    auth
+    .signOut()
+    .then (() => {
+        navigation.navigate("Login")
+        Alert.alert('Are you sure want to sign out?')
+    }) 
 
     return (
 <View style={stylesWNC.container}>
   {/* syntax for big title at the top of the screen for WashNClean */}
   <Text style={stylesWNC.TopTitle}>WashNClean</Text>
+
+<Text style={{top:'10%', left:'-40%', fontSize:20}}>Email: </Text>
+{/* <Text>{auth.currentUser?.email}</Text> */}
+
+<TouchableOpacity
+         style={stylesWNC.buttonSignOut}
+         onPress={handleSginOut}>
+         <Text style={stylesWNC.textSignOut}>Sign Out</Text>
+</TouchableOpacity>
  
   {/* from here to below are navigation syntax navigate to related screen */}
   <TouchableOpacity style={stylesWNC.CHome} onPress={() => navigation.navigate("Homepage")}>  
