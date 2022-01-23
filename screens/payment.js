@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import PaymentConfirmation from './paymentconfirmation';
+import { useNavigation } from '@react-navigation/native';
 import {
   SafeAreaView,
   StyleSheet,
@@ -10,9 +11,9 @@ import {
   ActivityIndicator
 } from 'react-native';
 
-const Payment = () => {
+function Payment() {
   
-  const navigation = useNavigation()
+  const navigation = useNavigation();
 return (
   <SafeAreaView style={{flex: 1}}>
     <Text style={styles.text}>
@@ -72,6 +73,7 @@ return (
   </SafeAreaView>
 );
 };
+export default Payment
 
 const styles = StyleSheet.create({
   container: {
@@ -134,5 +136,3 @@ const styles = StyleSheet.create({
     fontSize: 25,
   },
 });
-
-export default Payment;
