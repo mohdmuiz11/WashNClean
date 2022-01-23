@@ -6,7 +6,6 @@ container: {
     backgroundColor: '#ffffff',
     flex: 1,
     alignItems: 'center',
-    alignContent: "space-around"
 },
 TopTitle: {
     fontSize: 40,
@@ -22,7 +21,6 @@ textTitle1: {
     fontWeight: 'bold',
     textAlign: 'center',
     top: '30%',
-    marginBottom: 25,
 },
 texttable: {
     fontSize: 15,
@@ -37,7 +35,6 @@ tableLayout: {
 },
 gridLayout: {
     top: '55%',
-    alignContent: "center",
 },
 logoWNC: {
     top: '150%',
@@ -198,19 +195,22 @@ navtext: {
     top: 48
 },
 buttonSignOut: {
-    alignItems: 'center',
-    backgroundColor: 'lightblue',
-    borderColor: '#000000',
-    borderTopLeftRadius: 10,
-    borderTopRightRadius: 10,
-    borderBottomLeftRadius: 10,
-    borderBottomRightRadius: 10,
-    width: 100,
-    height: 30,
-    top: '40%',
+    width: "80%",
+    borderWidth: 3,
+    borderColor: "white",
+    borderRadius: 25,
+    height: 50,
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop: 100,
+    backgroundColor: "#0000ff",
+    marginLeft: 40,
+    marginRight: 40,
 },
 textSignOut:{
-    fontSize: 20
+    color: 'white',
+    fontSize: 20,
+    fontWeight: 'bold'
 }
 
 })
