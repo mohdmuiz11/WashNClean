@@ -28,8 +28,12 @@ The features and functionalities that we include inside our WashNClean applicati
 > - **Simple navigation** : We proposed such simple and easy navigation where all the navigation button to other screen are at the same places so users will not get confuse while learning how to use our app and also we use basic color as the background to minimize the complexity and messy of our application.
 
 ### Figure 1 : UI Login
+![LoginScreen](https://user-images.githubusercontent.com/43456427/150673734-a9d01b28-cb9b-4c22-8aa8-bb0f45caa4d9.png)
+> Registered user will be able to directly use their registered credentials to proceed to the application after homepage after their login credential is checked and verified by Firebase Authentication Service. Credentials needed for user login is email and password. User can navigate to Sign Up page to register a new account
 
 ### Figure 2 : UI SignUp 
+![LoginScreen](https://user-images.githubusercontent.com/43456427/150673786-c323c569-10de-4c4c-9506-23c0acfc1b7c.png)
+> Firebase Authentication will create a new user account after the user details is filled. User details (including name, e-mail and address) will be sent to Firebase Firestore for persistent storage. On successful registration, user will be navigated to the application's homepage.
 
 ### Figure 3 : UI Homepage
 ![HomepageScreen](https://user-images.githubusercontent.com/94210480/150668224-a0b666b1-aad3-4ac1-aea5-e5f0aa0862ee.png)
@@ -45,7 +49,7 @@ The features and functionalities that we include inside our WashNClean applicati
 
 ### Figure 6 : UI Profile
 ![ProfileScreen](https://user-images.githubusercontent.com/94210480/150671408-a4268c2e-192e-4348-bf53-fa4d0692d5b1.png)
-> Profile screen displays the information of the user whenever the login into the application.
+> Profile screen displays the information of the user whenever the user login into the application based on the saved information in Firebase Firestore.
 
 ### Figure 7 : UI Location
 
@@ -92,7 +96,8 @@ The features and functionalities that we include inside our WashNClean applicati
 > - Homepage  
 ![Homepage](https://user-images.githubusercontent.com/50144073/147585581-5ce4e586-33d0-4464-96a7-984ee4d53d36.jpg)
 After authentication, the user will be directed to WashNClean homepage. The icon at the top screen is FAQ button that will be navigated to FAQ screen when user clicked it, while in the middle part is where the icon wheather located and when clicked, it will direct to Weather screen. In the Homepage screen, in there also where we put the updated prices of our services and at the bottom part is the main navigation part that lead to Location, Tracking and Profile screen.
-> - Order Form  
+> - Order Form 
+
 ![orderform](https://user-images.githubusercontent.com/50144073/147585604-e5dc1a78-ce7c-46da-9ca6-2c7f6267a133.jpg)
 
 > - Location  
@@ -114,6 +119,12 @@ b) Nor Bedriah Binti Munadi
 c) Muhammad Izzuddin bin Suhaili 
 
 d) Muhammad Azri Bin Zulkarnain 
+> - UI design for Login page, Sign Up page
+> - Implementation of Firebase API for application backend
+> - Implementing Firebase Authentication handler for Login and Sign Up
+> - Implementing Firebase Firestore handler on user creation for user data storage
+> - Implementation of Firebase Firestore fetch function for user profile page
+> - Implementation of Firebase Firestore handler for Feedback page
 
 e) Faiq Shahmmy bin Shalizam 
 
