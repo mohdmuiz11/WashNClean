@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import PaymentConfirmation from './paymentconfirmation';
-import { useNavigation } from '@react-navigation/native';
 import {
   SafeAreaView,
   StyleSheet,
@@ -10,7 +9,7 @@ import {
   TouchableOpacity,
   ActivityIndicator
 } from 'react-native';
-import { useNavigation } from "@react-navigation/native";
+import { useNavigation } from "@react-navigation/native"
 
 function Payment() {
   
