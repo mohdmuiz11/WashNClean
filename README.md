@@ -69,9 +69,6 @@ The features and functionalities that we include inside our WashNClean applicati
 > Payment successful will be prompt after the user choose the payment method
 
 
-### Figure 6 : UI Profile
-
-
 ## 4.0 Screen Navigation and Components
 ## Screen Navigation Diagram
 ![Untitled Diagram DarkMode](https://user-images.githubusercontent.com/43456427/147627013-ef1b3b94-ff58-40dc-87f9-c6e9f37fff85.jpg)
@@ -144,6 +141,7 @@ d) Muhammad Azri Bin Zulkarnain
 e) Faiq Shahmmy bin Shalizam 
 > - UI design for Payment page, Payment Confirmation 
 > 
+
 ## 7.0 Conclusion
 
 ## 8.0 References
