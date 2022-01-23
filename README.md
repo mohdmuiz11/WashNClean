@@ -58,6 +58,14 @@ The features and functionalities that we include inside our WashNClean applicati
 ### Figure 9 : UI Order Form
 
 ### Figure 10 : UI Payment
+![paymentmethod](https://user-images.githubusercontent.com/50144073/150674957-4819b792-c8db-46c6-be84-7a0b707ed6e0.PNG)
+> User need to choose their payment method to pay 
+
+![paymentconfirmation](https://user-images.githubusercontent.com/50144073/150674988-c3446de7-497e-4624-8053-b2fa3720544b.PNG)
+> Payment successful will be prompt after the user choose the payment method
+
+
+### Figure 6 : UI Profile
 
 
 ## 4.0 Screen Navigation and Components
