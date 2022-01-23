@@ -145,11 +145,8 @@ d) Muhammad Azri Bin Zulkarnain
 
 e) Faiq Shahmmy bin Shalizam 
 > - UI design for Payment page, Payment Confirmation 
-> 
 
-## 7.0 Conclusion
-
-## 8.0 References
+## 7.0 References
 > - Laundry Care. (n.d). Retrieved December 1, 2021 from https://www.laundrycare.biz/
 
 ## Youtube Presentation Link
