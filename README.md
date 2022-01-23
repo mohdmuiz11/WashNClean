@@ -23,8 +23,8 @@ This project is designed for delivery laundry services, where the laundries can 
 
 ## 3.0 Features and Functionalities
 The features and functionalities that we include inside our WashNClean application are mostly related with laundry services and how we want to implemented the delivery services of laundry into the application so our application is flexibility and simple to use even to someone who not tech-savvy. Below are the features and functionalities that we put inside our application,
-> - **Site Search** : we proposed to put the Site Search into our WashNClean application to delight our potential user for easy searchinf by using keyword that suitable with something that they desired to search inside our application.
-> - **Third-party authentication** : We proposed to use the third-party authentication like Facebook, Google when user try to login to our application so there are less complicated things like users tend to forgot their own password happened.
+> - **Site Search** : we proposed to put the Site Search into our WashNClean application by applying it inside Weather screen where user can search the condition of the weather for any state by putting the state name in the site search.
+> - **Third-party authentication** : We proposed to use the third-party authentication when user try to login to our application so there are less complicated things like users tend to forgot their own password happened.
 > - **Simple navigation** : We proposed such simple and easy navigation where all the navigation button to other screen are at the same places so users will not get confuse while learning how to use our app and also we use basic color as the background to minimize the complexity and messy of our application.
 
 ### Figure 1 : UI Login
@@ -67,6 +67,7 @@ The features and functionalities that we include inside our WashNClean applicati
 ![paymentmethod](https://user-images.githubusercontent.com/50144073/150674957-4819b792-c8db-46c6-be84-7a0b707ed6e0.PNG)
 > User need to choose their payment method to pay 
 
+### Figure 11 : UI Payment
 ![paymentconfirmation](https://user-images.githubusercontent.com/50144073/150674988-c3446de7-497e-4624-8053-b2fa3720544b.PNG)
 > Payment successful will be prompt after the user choose the payment method
 
@@ -97,8 +98,8 @@ The features and functionalities that we include inside our WashNClean applicati
   - MapView is used to display Map in the "Location" page in the application for users to find a WashNClean near their premises
 - Weather
   - Weather API will be used to provide weather data for the users in the application
-- Search API
-  - Search API is used to let user use the search function to do a local search within the application
+- Site Search 
+  - Search API is used to let user use the search function to do a local search within Weather screen inside the application
 
 ## 5.0 Sequence Diagram of The Application
 > - Login and Register
@@ -125,7 +126,7 @@ a) Mohammad Mu'izzuddin
 > - Implement a useEffect state that it always update total price when changing the weight and service type
 
 b) Nor Bedriah Binti Munadi  
-> - Design of the UI of Homepage, FAQ, Weather Snippets and Profile
+> - Design of the UI of Homepage, FAQ, Weather Snippets and Profile.
 > - Implement the API for the weather snippets from https://openweathermap.org/
 > - Implement the ScrollView function for UI FAQ screen.
 > - Implement data sending and receiving from OpenWeatherMap through Search Site function in the UI Weather Screen.
