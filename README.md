@@ -27,6 +27,25 @@ The features and functionalities that we include inside our WashNClean applicati
 > - **Third-party authentication** : We proposed to use the third-party authentication like Facebook, Google when user try to login to our application so there are less complicated things like users tend to forgot their own password happened.
 > - **Simple navigation** : We proposed such simple and easy navigation where all the navigation button to other screen are at the same places so users will not get confuse while learning how to use our app and also we use basic color as the background to minimize the complexity and messy of our application.
 
+### Figure 1 : UI Login
+### Figure 2 : UI SignUp 
+### Figure 3 : UI Homepage
+![HomepageScreen](https://user-images.githubusercontent.com/94210480/150668224-a0b666b1-aad3-4ac1-aea5-e5f0aa0862ee.png)
+> After authentication, user will be directed to Homepage screen. As user can see, at the top screen is where the FAQ button is located and when clicked, will directed to FAQ screen. In the middle part, the weather's icon being located at, when user clicked it, it navigate to Weather screen while below the icon is where all the updated price of our services was stated there.
+### Figure 4 : UI Frequently-Asked Question (FAQ)
+![FAQScreen](https://user-images.githubusercontent.com/94210480/150668244-6bf24703-b4e8-46a8-897d-c18b906317b2.png)
+
+### Figure 5 : UI Weather Site
+![WeatherScreen](https://user-images.githubusercontent.com/94210480/150668247-79b730c4-7500-4bd8-80c1-3b06d71f67e3.png)
+
+### Figure 6 : UI Profile
+![ProfileScreen](https://user-images.githubusercontent.com/94210480/150668297-34ef1f74-3eb0-497e-8c0f-4d7ad76e5f59.png)
+
+### Figure 7 : UI Location
+### Figure 8 : UI Feedback Form
+### Figure 9 : UI Order Form
+### Figure 10 : UI Payment
+
 
 ## 4.0 Screen Navigation and Components
 ## Screen Navigation Diagram
@@ -59,7 +78,7 @@ The features and functionalities that we include inside our WashNClean applicati
 - Search API
   - Search API is used to let user use the search function to do a local search within the application
 
-## 5.0 Sequence Diagram of The Proposed Application
+## 5.0 Sequence Diagram of The Application
 > - Login and Register
 ![login_register](https://user-images.githubusercontent.com/55783309/147570434-6226ade6-ee23-44b3-9ac0-1dac23495b0c.jpg)
 
@@ -75,42 +94,7 @@ After authentication, the user will be directed to WashNClean homepage. The icon
 > - Tracking  
 ![tracking](https://user-images.githubusercontent.com/50144073/147585650-42db6522-99b6-4280-994b-58402239d092.jpg)
 
-
-
-## 6.0 References
-> - Laundry Care. (n.d). Retrieved December 1, 2021 from https://www.laundrycare.biz/
-
-## Youtube Presentation Link
-> https://youtu.be/kAoKowdP-yU
-
-# FINAL REPORT : WashNClean
-A special application for laundry services
-
-## 1.0 Introduction
-
-## 2.0 Overall Design
-
-## 3.0 Statement of The Functionality and Screenshots of The Application
-### Figure 1 : UI Login
-### Figure 2 : UI SignUp 
-### Figure 3 : UI Homepage
-![HomepageScreen](https://user-images.githubusercontent.com/94210480/150668224-a0b666b1-aad3-4ac1-aea5-e5f0aa0862ee.png)
-> After authentication, user will be directed to Homepage screen. As user can see, at the top screen is where the FAQ button is located and when clicked, will directed to FAQ screen. In the middle part, the weather's icon being located at, when user clicked it, it navigate to Weather screen while below the icon is where all the updated price of our services was stated there.
-### Figure 4 : UI Frequently-Asked Question (FAQ)
-![FAQScreen](https://user-images.githubusercontent.com/94210480/150668244-6bf24703-b4e8-46a8-897d-c18b906317b2.png)
-
-### Figure 5 : UI Weather Site
-![WeatherScreen](https://user-images.githubusercontent.com/94210480/150668247-79b730c4-7500-4bd8-80c1-3b06d71f67e3.png)
-
-### Figure 6 : UI Profile
-![ProfileScreen](https://user-images.githubusercontent.com/94210480/150668297-34ef1f74-3eb0-497e-8c0f-4d7ad76e5f59.png)
-
-### Figure 7 : UI Location
-### Figure 8 : UI Feedback Form
-### Figure 9 : UI Order Form
-### Figure 10 : UI Payment
-
-## 4.0 Contribution by The Group Members
+## 6.0 Contribution by The Group Members
 
 a) Mohammad Mu'izzuddin 
 
@@ -125,4 +109,11 @@ d) Muhammad Azri Bin Zulkarnain
 
 e) Faiq Shahmmy bin Shalizam 
 
-## 5.0 Conclusion
+## 8.0 Conclusion
+
+## 7.0 References
+> - Laundry Care. (n.d). Retrieved December 1, 2021 from https://www.laundrycare.biz/
+
+## Youtube Presentation Link
+> https://youtu.be/kAoKowdP-yU  -- Proposal Presentation
+
