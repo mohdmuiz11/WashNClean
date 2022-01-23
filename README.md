@@ -45,6 +45,7 @@ The features and functionalities that we include inside our WashNClean applicati
 
 ### Figure 6 : UI Profile
 ![ProfileScreen](https://user-images.githubusercontent.com/94210480/150671408-a4268c2e-192e-4348-bf53-fa4d0692d5b1.png)
+> Profile screen displays the information of the user whenever the login into the application.
 
 ### Figure 7 : UI Location
 
@@ -58,8 +59,6 @@ The features and functionalities that we include inside our WashNClean applicati
 ## 4.0 Screen Navigation and Components
 ## Screen Navigation Diagram
 ![Untitled Diagram DarkMode](https://user-images.githubusercontent.com/43456427/147627013-ef1b3b94-ff58-40dc-87f9-c6e9f37fff85.jpg)
-
-
 
 # Components Labelling
 > ![WashNClean_label-Login](https://user-images.githubusercontent.com/43456427/147541725-228753f1-f205-4cf8-9655-2304716749d3.jpg)
