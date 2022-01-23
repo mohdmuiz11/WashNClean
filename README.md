@@ -141,7 +141,8 @@ d) Muhammad Azri Bin Zulkarnain
 > - Implementation of Firebase Firestore handler for Feedback page
 
 e) Faiq Shahmmy bin Shalizam 
-
+> - UI design for Payment page, Payment Confirmation 
+> 
 ## 7.0 Conclusion
 
 ## 8.0 References
