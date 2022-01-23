@@ -26,8 +26,14 @@ function homepage ({navigation}){
   </TouchableOpacity>
 
   {/* syntax for WashNClean Updated Price part */}
-  <Text style={stylesWNC.textTitle1}>Updated Price For 2022</Text>
-  <Grid style={stylesWNC.gridLayout}>
+  <Grid style={{top:'55%'}}>
+        <Col size={70}>
+          <Row style={stylesWNC.tableTitle}>
+          <Text style={stylesWNC.texttable}>Updated Price For 2022</Text>
+          </Row>
+        </Col>
+  </Grid>
+  <Grid style={{top:'-20%'}}>
         <Col size={50}>
           <Row style={stylesWNC.tableLayout}>
           <Text style={stylesWNC.texttable}>Details</Text>
