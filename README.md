@@ -41,7 +41,7 @@ The features and functionalities that we include inside our WashNClean applicati
 
 ### Figure 5 : UI Weather Site
 ![WeatherScreen](https://user-images.githubusercontent.com/94210480/150668247-79b730c4-7500-4bd8-80c1-3b06d71f67e3.png)
-> After user clicks the Weather icon, they will be navigated to Weather screen where in here, user can see the 
+> Weather screen displays the current temperature in their location. If the user desired to see other state's weather they can type the desired location in the Search Site at the top part of the screen.
 
 ### Figure 6 : UI Profile
 ![ProfileScreen](https://user-images.githubusercontent.com/94210480/150671408-a4268c2e-192e-4348-bf53-fa4d0692d5b1.png)
