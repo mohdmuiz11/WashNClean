@@ -60,6 +60,8 @@ The features and functionalities that we include inside our WashNClean applicati
 >Feedback form consist field for customer to give any suggestion or idea about the service.
 
 ### Figure 9 : UI Order Form
+![orderform](https://user-images.githubusercontent.com/76739315/150681518-b5036741-b039-4739-a4ff-b3638b0350ea.png)
+> Order form to fill out user's order. Consist of dropdown menu to select service type, input weight and select date and time for both pickup and delivery.
 
 ### Figure 10 : UI Payment
 ![paymentmethod](https://user-images.githubusercontent.com/50144073/150674957-4819b792-c8db-46c6-be84-7a0b707ed6e0.PNG)
@@ -118,6 +120,9 @@ After authentication, the user will be directed to WashNClean homepage. The icon
 ## 6.0 Contribution by The Group Members
 
 a) Mohammad Mu'izzuddin 
+> - Design for Order Form page.
+> - Implement DateTimePicker for schedule time pickup and delivery.
+> - Implement a useEffect state that it always update total price when changing the weight and service type
 
 b) Nor Bedriah Binti Munadi  
 > - Design of the UI of Homepage, FAQ, Weather Snippets and Profile
