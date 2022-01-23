@@ -6,6 +6,7 @@ import profile from "./screens/profile";
 import Faq from "./screens/faq";
 import SignUpScreen from "./screens/signup";
 import LoginScreen from "./screens/login";
+import Feedback from "./screens/feedback";
 
 const Stack = createStackNavigator();
 
@@ -35,6 +36,7 @@ const MyStack = () => {
         <Stack.Screen name="Homepage" component={homepage} />
         <Stack.Screen name="Profile" component={profile} />
         <Stack.Screen name="Faq" component={Faq} />
+        <Stack.Screen name="Feedback" component={Feedback}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

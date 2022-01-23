@@ -1,39 +1,78 @@
 import * as React from 'react';
 import { Text, View,Button,Image,TextInput,TouchableOpacity, StyleSheet,Alert } from 'react-native';
 import Constants from 'expo-constants';
+import { initializeApp } from 'firebase/app';
+import { firebaseConfig } from '../firebase';
+import { getAuth } from 'firebase/auth';
+import { getFirestore, collection, addDoc} from 'firebase/firestore';
 
 
 
-class Feedback extends React.Component  {
-    render() {
-    return (
-    <View style={styles.container}>
-      <Text style={styles.header}>
-        Send us some feedback.
-      </Text>
+const Feedback = () => {
 
-      <Text style={styles.content}>
-      Do you satisfied about the service?{'\n'} 
-      Do you have a suggestion?{'\n'}
-      Let us know in the field below.
-      </Text>
+  const [feedbackMsg, setFeedbackMsg] = React.useState("");
 
-      <TextInput style= {styles.field}>
-      <Text style={styles.textprop}>
-      Describe your experience and issues...
-      </Text>
-      </TextInput>
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  const firestore = getFirestore(app);
 
-       <Button
-        title="Send feedback"
-        onPress={() => Alert.alert('Thank you!')}
-      /> 
+  const feedbackHandler = async () => {
+    if(feedbackMsg === ""){
+      Alert.alert("Invalid Input", "Please enter your feedback before submitting")
+    } else {
+      const userFeedback = collection(firestore, 'userFeedbacks')
+      const docData = {
+        'feedbackMsg': feedbackMsg,
+        'useruid': auth.currentUser.uid,
+        'date': new Date(),
+      }
+      await addDoc(userFeedback, docData)
+            .then(() => {
+              console.log('Feedback sent')
+              Alert.alert('Thank You', 'Feedback sent')
+            }).catch((e) => {
+              console.log(e);
+              Alert.alert('Sending feedback failed', e.message);
+            })
+    }
+  }
 
+  return(
+      <View style={styles.container}>
+        <Text style={styles.header}>
+          Send us some feedback.
+        </Text>
   
-    </View>
+        <Text style={styles.content}>
+        Are you satisfied with the service?{'\n'} 
+        Do you have any suggestions?{'\n'}
+        Let us know in the field below.
+        </Text>
+  
+        <TextInput style= {styles.field}
+          placeholder='Describe your experience and issues'
+          placeholderTextColor={"#00000073"}
+          value={feedbackMsg}
+          onChangeText={(val) => setFeedbackMsg(val)}
+          multiline={true}
+          numberOfLines={8}
+        >
+        </TextInput>
+  
+         <TouchableOpacity style={styles.submitFeedbackBtn}
+          onPress={feedbackHandler}
+        >
+          <Text style={styles.buttonText}>
+            Send Feedback
+          </Text>
+        </TouchableOpacity>
+  
+    
+      </View>
   );
 }
-}
+
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -65,6 +104,25 @@ const styles = StyleSheet.create({
     color: 'grey',
 
   },
+
+  submitFeedbackBtn: {
+    width: "80%",
+    borderWidth: 3,
+    borderColor: "white",
+    borderRadius: 25,
+    height: 50,
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop: 25,
+    backgroundColor: "#E6DB42",
+    marginLeft: 40,
+    marginRight: 40,
+  },
+
+  buttonText: {
+    color: "#0E0A0A",
+    fontSize: 18,
+  }
 });
 export default Feedback
 
