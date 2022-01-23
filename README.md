@@ -1,4 +1,4 @@
-# WashNClean
+# PROPOSAL : WashNClean
 A special application for laundry services
 
 ## Group Name
@@ -82,3 +82,16 @@ The features and functionalities that we include inside our WashNClean applicati
 
 ## Youtube Presentation Link
 > https://youtu.be/kAoKowdP-yU
+
+# FINAL REPORT : WashNClean
+A special application for laundry services
+
+## 1.0 Introduction
+
+## 2.0 Overall Design
+
+## 3.0 Statement of The Functionality and Screenshots of The Application
+
+## 4.0 Contribution by The Group Members
+
+## 5.0 Conclusion
