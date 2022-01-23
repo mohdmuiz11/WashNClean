@@ -28,14 +28,16 @@ The features and functionalities that we include inside our WashNClean applicati
 > - **Simple navigation** : We proposed such simple and easy navigation where all the navigation button to other screen are at the same places so users will not get confuse while learning how to use our app and also we use basic color as the background to minimize the complexity and messy of our application.
 
 ### Figure 1 : UI Login
+
 ### Figure 2 : UI SignUp 
+
 ### Figure 3 : UI Homepage
 ![HomepageScreen](https://user-images.githubusercontent.com/94210480/150668224-a0b666b1-aad3-4ac1-aea5-e5f0aa0862ee.png)
 > After authentication, user will be directed to Homepage screen. As user can see, at the top screen is where the FAQ button is located and when clicked, will directed to FAQ screen. In the middle part, the weather's icon being located at, when user clicked it, it navigate to Weather screen while below the icon is where all the updated price of our services was stated there.
 
 ### Figure 4 : UI Frequently-Asked Question (FAQ)
 ![FAQScreen](https://user-images.githubusercontent.com/94210480/150668244-6bf24703-b4e8-46a8-897d-c18b906317b2.png)
-> After user clicks the FAQ icon, it will direct them to FAQ screen. In here, we apply the scrollview function so it can ease the user to scroll and look up for any relatable question that they need to see.
+> After user clicks the FAQ icon, it will direct them to FAQ screen. In here, FAQ displays the scrollview function so it can ease the user to scroll and look up for any relatable question that they need to see.
 
 ### Figure 5 : UI Weather Site
 ![WeatherScreen](https://user-images.githubusercontent.com/94210480/150668247-79b730c4-7500-4bd8-80c1-3b06d71f67e3.png)
@@ -45,8 +47,11 @@ The features and functionalities that we include inside our WashNClean applicati
 ![ProfileScreen](https://user-images.githubusercontent.com/94210480/150671408-a4268c2e-192e-4348-bf53-fa4d0692d5b1.png)
 
 ### Figure 7 : UI Location
+
 ### Figure 8 : UI Feedback Form
+
 ### Figure 9 : UI Order Form
+
 ### Figure 10 : UI Payment
 
 
