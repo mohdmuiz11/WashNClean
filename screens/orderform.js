@@ -7,6 +7,7 @@ import {
   Image,
   TouchableOpacity,
   StyleSheet,
+  Alert,
 } from "react-native";
 import { Button } from "react-native-elements";
 import DateTimePicker from '@react-native-community/datetimepicker';
@@ -92,6 +93,16 @@ const OrderForm = () => {
             case 4: setPrice(15); break;
         }
         setServiceType(whatService);
+    }
+
+    const checkEmpty = () => {
+        if (totalPrice == 0) {
+            Alert.alert("Invalid input!")
+        }
+        else
+        {
+            navigation.navigate("Payment");
+        }
     }
 
     return (
@@ -208,7 +219,7 @@ const OrderForm = () => {
                 buttonStyle={{ backgroundColor: "green", borderWidth: 2, borderRadius: 30 }}
                 containerStyle={{ width: 200, margin: 5 }}
                 title="PAY NOW"
-                onPress={() => navigation.navigate("Payment")}
+                onPress={() => checkEmpty()}
                 titleStyle={{ marginHorizontal: 10, fontSize: 20}}
                 type="solid"
             />
