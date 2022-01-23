@@ -140,7 +140,7 @@ const Profile = () => {
 
         <TouchableOpacity
           style={stylesWNC.CTracker}
-          onPress={() => navigation.navigate()}
+          onPress={() => navigation.navigate("OrderForm")}
         >
           <Text style={stylesWNC.navtext}>Tracker</Text>
           <Image
