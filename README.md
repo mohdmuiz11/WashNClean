@@ -95,6 +95,7 @@ A special application for laundry services
 ### Figure 2 : UI SignUp 
 ### Figure 3 : UI Homepage
 ![HomepageScreen](https://user-images.githubusercontent.com/94210480/150668224-a0b666b1-aad3-4ac1-aea5-e5f0aa0862ee.png)
+After authentication,
 
 ### Figure 4 : UI Frequently-Asked Question (FAQ)
 ![FAQScreen](https://user-images.githubusercontent.com/94210480/150668244-6bf24703-b4e8-46a8-897d-c18b906317b2.png)
