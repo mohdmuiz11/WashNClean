@@ -101,7 +101,7 @@ function homepage ({navigation}){
     <Image style={stylesWNC.Location} source={require('../assets/location.png')}/>
   </TouchableOpacity>
 
-  <TouchableOpacity style={stylesWNC.CTracker} onPress={() => navigation.navigate("OrderForm")}>
+  <TouchableOpacity style={stylesWNC.CTracker} onPress={() => navigation.navigate("OrderTrack")}>
     <Text style={stylesWNC.navtext}>Tracker</Text>
     <Image style={stylesWNC.Tracker} source={require('../assets/track.png')}/>
   </TouchableOpacity>

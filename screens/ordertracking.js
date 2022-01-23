@@ -28,7 +28,7 @@ const customStyles = {
   currentStepIndicatorSize:30,
   separatorStrokeWidth: 6,
   currentStepStrokeWidth: 5,
-  stepStrokeCurrentColor: '#fe7013',
+  stepStrokeCurrentColor: 'white',
   stepStrokeWidth: 4,
   stepStrokeFinishedColor: '#fe7013',
   stepStrokeUnFinishedColor: '#aaaaaa',
@@ -36,14 +36,15 @@ const customStyles = {
   separatorUnFinishedColor: '#aaaaaa',
   stepIndicatorFinishedColor: '#fe7013',
   stepIndicatorUnFinishedColor: '#ffffff',
-  stepIndicatorCurrentColor: '#ffffff',
+  stepIndicatorCurrentColor: 'skyblue',
   stepIndicatorLabelFontSize: 12,
   currentStepIndicatorLabelFontSize: 13,
-  stepIndicatorLabelCurrentColor: '#fe7013',
+  stepIndicatorLabelCurrentColor: 'white',
   stepIndicatorLabelFinishedColor: '#ffffff',
   stepIndicatorLabelUnFinishedColor: '#aaaaaa',
   labelColor: '#999999',
   labelSize: 18,
+  labelAlign: 'center',
   currentStepLabelColor: 'skyblue'
 }
 
@@ -58,6 +59,7 @@ const OrderTrack = () => {
             <View style={styles.stepcontainer}>
                 <StepIndicator
                     customStyles={customStyles}
+                    stepCount={7}
                     currentPosition={currentPosition}
                     labels={labels}
                     direction="vertical"
