@@ -12,6 +12,7 @@ import Location from "./screens/location";
 import Payment from "./screens/payment";
 import PaymentConfirmation from "./screens/paymentconfirmation";
 import Weather from "./screens/Weather";
+import OrderTrack from "./screens/ordertracking";
 
 const Stack = createStackNavigator();
 
@@ -47,6 +48,7 @@ const MyStack = () => {
         <Stack.Screen name="Location" component={Location} />
         <Stack.Screen name="Payment" component={Payment} />
         <Stack.Screen name="PaymentConfirmation" component={PaymentConfirmation} />
+        <Stack.Screen name="OrderTrack" component={OrderTrack} />
       </Stack.Navigator>
     </NavigationContainer>
   );

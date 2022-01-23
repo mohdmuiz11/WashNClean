@@ -9,6 +9,7 @@ import {
   TouchableOpacity,
   ActivityIndicator
 } from 'react-native';
+import { useNavigation } from "@react-navigation/native";
 
 const Payment = () => {
   
