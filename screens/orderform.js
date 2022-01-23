@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Payment from './payment';
 import {
   Text,
   View,
@@ -90,6 +91,10 @@ const OrderForm = () => {
                 //set minimum date by today
                 minimumDate={new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate())}
                 />
+             <Button
+               title="Pay Now"
+               onPress={() => navigation.navigate(Payment)}
+                 /> 
             )}
 
 
