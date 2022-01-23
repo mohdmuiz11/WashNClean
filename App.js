@@ -6,7 +6,12 @@ import profile from "./screens/profile";
 import Faq from "./screens/faq";
 import SignUpScreen from "./screens/signup";
 import LoginScreen from "./screens/login";
+<<<<<<< HEAD
 import Feedback from "./screens/feedback";
+=======
+import OrderForm from "./screens/orderform";
+import Location from "./screens/location";
+>>>>>>> 05d22147995edbe5a099673ceb31c8b9c809f11e
 
 const Stack = createStackNavigator();
 
@@ -36,7 +41,12 @@ const MyStack = () => {
         <Stack.Screen name="Homepage" component={homepage} />
         <Stack.Screen name="Profile" component={profile} />
         <Stack.Screen name="Faq" component={Faq} />
+<<<<<<< HEAD
         <Stack.Screen name="Feedback" component={Feedback}/>
+=======
+        <Stack.Screen name="OrderForm" component={OrderForm} />
+        <Stack.Screen name="Location" component={Location} />
+>>>>>>> 05d22147995edbe5a099673ceb31c8b9c809f11e
       </Stack.Navigator>
     </NavigationContainer>
   );

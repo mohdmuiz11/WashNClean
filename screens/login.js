@@ -44,7 +44,6 @@ function LoginScreen() {
         console.log(error);
         Alert.alert(error.message);
       });
-      
     }
   };
 
