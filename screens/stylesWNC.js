@@ -90,6 +90,43 @@ search: {
     backgroundColor: 'lightgrey',
     borderColor: 'lightgrey'
 },
+//styles that used for location screen
+mapstyle:{
+    flex:0.7,
+    //backgroundColor: '#fff',
+    //alignItems: 'center',
+    //justifyContent: 'flex-end',
+    //position:'absolute',
+    borderWidth: 2,
+   // height: 80,
+    width: 395,
+    position: 'relative'
+
+},
+
+CardPos:{
+    padding: 10,
+    margin: 500,
+    position:'absolute',
+    //left:'104%',
+    //bottom:'-30%',
+    alignItems:'center',
+    borderRadius: 30 ,
+
+},
+NavCard:{
+    position:'absolute',
+    padding:55,
+    left:'-205%',
+    margin:695,
+    width:601
+},
+
+textStyle:{
+    textAlign: 'center',
+    color: 'black',
+    fontSize:15,
+  },
  
 //the styles used for navigation at certain screen  
 Homepage: {
