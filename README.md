@@ -52,8 +52,12 @@ The features and functionalities that we include inside our WashNClean applicati
 > Profile screen displays the information of the user whenever the user login into the application based on the saved information in Firebase Firestore.
 
 ### Figure 7 : UI Location
+![Screenshot (451)](https://user-images.githubusercontent.com/55783309/150675233-097c93bd-e78d-4203-8385-8bda4b70f435.png)
+>Location screen display the map with marker that indicate the location of our laundry shop also working hour and feedback button.
 
 ### Figure 8 : UI Feedback Form
+![Screenshot (450)](https://user-images.githubusercontent.com/55783309/150675295-fc14be49-9562-437c-96c7-0644b8cb96e4.png)
+>Feedback form consist field for customer to give any suggestion or idea about the service.
 
 ### Figure 9 : UI Order Form
 
@@ -125,6 +129,8 @@ b) Nor Bedriah Binti Munadi
 > - Implement data sending and receiving from OpenWeatherMap through Search Site function in the UI Weather Screen.
 
 c) Muhammad Izzuddin bin Suhaili 
+>- UI design for Location and Feedback pages.
+
 
 d) Muhammad Azri Bin Zulkarnain 
 > - UI design for Login page, Sign Up page
