@@ -80,15 +80,9 @@ const OrderForm = () => {
       ]
 
     useEffect(() => {
-    }, []);
-
-    const calculatePrice = (whatWeight) => {
-        console.log(whatWeight)
-        setWeight(whatWeight);
         let total = price * weight;
         setTotalPrice(total);
-        console.log(totalPrice)
-    }
+    }, [weight]);
 
     const chooseService = (whatService, index) => {
         switch(index){
@@ -127,7 +121,7 @@ const OrderForm = () => {
                     }
                     placeholder="0"
                     value={weight}
-                    onChangeText={(weight) => calculatePrice(weight)}
+                    onChangeText={(weight) => setWeight(weight)}
                     />
             </View>
 
