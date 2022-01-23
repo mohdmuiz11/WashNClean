@@ -64,7 +64,7 @@ const Location = () =>
     <Image style={stylesWNC.Location} source={require('../assets/location.png')}/>
   </View>
 
-  <TouchableOpacity style={stylesWNC.CTracker} onPress={() => navigation.navigate()}>
+  <TouchableOpacity style={stylesWNC.CTracker} onPress={() => navigation.navigate("OrderForm")}>
     <Text style={stylesWNC.navtext}>Tracker</Text>
     <Image style={stylesWNC.Tracker} source={require('../assets/track.png')}/>
   </TouchableOpacity>
