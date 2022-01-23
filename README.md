@@ -32,6 +32,7 @@ The features and functionalities that we include inside our WashNClean applicati
 ### Figure 3 : UI Homepage
 ![HomepageScreen](https://user-images.githubusercontent.com/94210480/150668224-a0b666b1-aad3-4ac1-aea5-e5f0aa0862ee.png)
 > After authentication, user will be directed to Homepage screen. As user can see, at the top screen is where the FAQ button is located and when clicked, will directed to FAQ screen. In the middle part, the weather's icon being located at, when user clicked it, it navigate to Weather screen while below the icon is where all the updated price of our services was stated there.
+
 ### Figure 4 : UI Frequently-Asked Question (FAQ)
 ![FAQScreen](https://user-images.githubusercontent.com/94210480/150668244-6bf24703-b4e8-46a8-897d-c18b906317b2.png)
 
@@ -39,7 +40,7 @@ The features and functionalities that we include inside our WashNClean applicati
 ![WeatherScreen](https://user-images.githubusercontent.com/94210480/150668247-79b730c4-7500-4bd8-80c1-3b06d71f67e3.png)
 
 ### Figure 6 : UI Profile
-![ProfileScreen](https://user-images.githubusercontent.com/94210480/150668297-34ef1f74-3eb0-497e-8c0f-4d7ad76e5f59.png)
+![ProfileScreen](https://user-images.githubusercontent.com/94210480/150671408-a4268c2e-192e-4348-bf53-fa4d0692d5b1.png)
 
 ### Figure 7 : UI Location
 ### Figure 8 : UI Feedback Form
@@ -103,14 +104,10 @@ b) Nor Bedriah Binti Munadi
 > - Implement the API for the weather snippets from https://openweathermap.org/
 > - Implement the ScrollView function for UI FAQ screen.
 > - Implement data sending and receiving from OpenWeatherMap through Search Site function in the UI Weather Screen.
+
 c) Muhammad Izzuddin bin Suhaili 
 
 d) Muhammad Azri Bin Zulkarnain 
-> - UI design for Login, Sign Up
-> - Implementation of Firebase API from firebase.google.com https://firebase.google.com/
-> - Implementing Firebase Authentication for user account Sign Up and Login
-> - Implementation of Firebase Firestore for data storage in Sign Up page, Feedback page.
-> - Fetching user data from Firebase Firestore for display in Profile page 
 
 e) Faiq Shahmmy bin Shalizam 
 
