@@ -92,24 +92,32 @@ A special application for laundry services
 
 ## 3.0 Statement of The Functionality and Screenshots of The Application
 ### Figure 1 : UI Login
-#### > Figure 1.1 : UI SignUp 
-### Figure 2 : UI Homepage
+### Figure 2 : UI SignUp 
+### Figure 3 : UI Homepage
 ![HomepageScreen](https://user-images.githubusercontent.com/94210480/150668224-a0b666b1-aad3-4ac1-aea5-e5f0aa0862ee.png)
 
-#### > Figure 2.1 : UI Frequently-Asked Question (FAQ)
+### Figure 4 : UI Frequently-Asked Question (FAQ)
 ![FAQScreen](https://user-images.githubusercontent.com/94210480/150668244-6bf24703-b4e8-46a8-897d-c18b906317b2.png)
 
-#### > Figure 2.2 : UI Weather Site
+### Figure 5 : UI Weather Site
 ![WeatherScreen](https://user-images.githubusercontent.com/94210480/150668247-79b730c4-7500-4bd8-80c1-3b06d71f67e3.png)
 
-#### > Figure 2.3 : UI Profile
+### Figure 6 : UI Profile
 ![ProfileScreen](https://user-images.githubusercontent.com/94210480/150668297-34ef1f74-3eb0-497e-8c0f-4d7ad76e5f59.png)
 
-### Figure 3 : UI Location
-#### > Figure 3.1 : UI Feedback Form
-### Figure 4 : UI Order Form
-#### > Figure 4.1 : UI Payment
+### Figure 7 : UI Location
+### Figure 8 : UI Feedback Form
+### Figure 9 : UI Order Form
+### Figure 10 : UI Payment
 
 ## 4.0 Contribution by The Group Members
+NAME | MATRIC NO | USERNAME | CONTRIBUTION
+------------ | ------------- | ----------------
+Mohammad Mu'izzuddin | 1918855 | @mohdmuiz11 |
+Nor Bedriah Binti Munadi | 1719890 | @Bedriah | > Implement the Framework of Homepage, FAQ, Weather Snippets and Profile
+> test
+Muhammad Izzuddin bin Suhaili | 1818479 | @Izzuddinsuhaili97 |
+Muhammad Azri Bin Zulkarnain | 1814867 | @Azurei0 |
+Faiq Shahmmy bin Shalizam | 1818897 | @faiqshahmy |
 
 ## 5.0 Conclusion
