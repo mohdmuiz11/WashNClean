@@ -1,4 +1,4 @@
-# PROPOSAL : WashNClean
+# WashNClean
 A special application for laundry services
 
 ## Group Name
@@ -35,9 +35,11 @@ The features and functionalities that we include inside our WashNClean applicati
 
 ### Figure 4 : UI Frequently-Asked Question (FAQ)
 ![FAQScreen](https://user-images.githubusercontent.com/94210480/150668244-6bf24703-b4e8-46a8-897d-c18b906317b2.png)
+> After user clicks the FAQ icon, it will direct them to FAQ screen. In here, we apply the scrollview function so it can ease the user to scroll and look up for any relatable question that they need to see.
 
 ### Figure 5 : UI Weather Site
 ![WeatherScreen](https://user-images.githubusercontent.com/94210480/150668247-79b730c4-7500-4bd8-80c1-3b06d71f67e3.png)
+> After user clicks the Weather icon, they will be navigated to Weather screen where in here, user can see the 
 
 ### Figure 6 : UI Profile
 ![ProfileScreen](https://user-images.githubusercontent.com/94210480/150671408-a4268c2e-192e-4348-bf53-fa4d0692d5b1.png)
