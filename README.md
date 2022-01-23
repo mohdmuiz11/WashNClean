@@ -112,7 +112,7 @@ A special application for laundry services
 
 ## 4.0 Contribution by The Group Members
 NAME | MATRIC NO | USERNAME | CONTRIBUTION
------------- | ------------- | ----------------
+------------ | ------------- | ---------------- | ----------------
 Mohammad Mu'izzuddin | 1918855 | @mohdmuiz11 |
 Nor Bedriah Binti Munadi | 1719890 | @Bedriah | > Implement the Framework of Homepage, FAQ, Weather Snippets and Profile
 > test
