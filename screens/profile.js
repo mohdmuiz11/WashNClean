@@ -19,8 +19,6 @@ import {
   doc,
   getFirestore,
   getDoc,
-  QueryDocumentSnapshot,
-  DocumentSnapshot,
 } from "firebase/firestore";
 
 //Nor Bedriah Binti Munadi
@@ -51,20 +49,6 @@ const Profile = () => {
     }
   };
 
-  // const docRef = doc(firestore, 'users', auth.currentUser.email)
-  // getDoc(docRef)
-  //   .then((snapshot) => {
-  //     // on success
-  //     if(snapshot.exists) {
-  //       setUserDoc(snapshot.data())
-  //     } else {
-  //       Alert.alert('User data not found')
-  //     }
-  //   } ).catch((e) => {
-  //     // on fail
-  //     Alert.alert(e.message)
-  //   })
-
   const showSignOutDialog = () => {
     return Alert.alert("Are you sure to sign out?", "Sign out now?", [
       {
@@ -79,7 +63,7 @@ const Profile = () => {
   }
   const handleSginOut = async () => {
     await auth.signOut();
-    navigation.replace("LoginScreen");
+    navigation.navigate("LoginScreen");
   };
 
   if (isLoading) {
@@ -119,10 +103,10 @@ const Profile = () => {
         </View>
         </Card>
         
-        <Text style={{ top: "10%", left: "-30%", fontSize: 20 }}>Email: </Text>
-        <Text style={{ top: "6%", left: "20%", fontSize: 20 }}>
-          {auth.currentUser?.email}
-        </Text>
+        <Text style={{ top: "10%", left: "-34%", fontSize: 20 }}>Email: </Text>
+        <Text style={{ top: "6%", left: "16%", fontSize: 20 }}>{auth.currentUser?.email}</Text>
+        <Text style={{ top: "10%", left: "-30%", fontSize: 20 }}>Address: </Text>
+        <Text style={{ top: "6%", width: '55%', left: "22%", fontSize: 20 }}>{userDoc?.data().address}</Text>
 
         <TouchableOpacity
           style={stylesWNC.buttonSignOut}
@@ -145,7 +129,7 @@ const Profile = () => {
 
         <TouchableOpacity
           style={stylesWNC.CLocation}
-          onPress={() => navigation.navigate()}
+          onPress={() => navigation.navigate("Location")}
         >
           <Text style={stylesWNC.navtext}>Location</Text>
           <Image
@@ -156,7 +140,7 @@ const Profile = () => {
 
         <TouchableOpacity
           style={stylesWNC.CTracker}
-          onPress={() => navigation.navigate("OrderForm")}
+          onPress={() => navigation.navigate()}
         >
           <Text style={stylesWNC.navtext}>Tracker</Text>
           <Image
