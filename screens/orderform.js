@@ -70,6 +70,8 @@ const OrderForm = () => {
     const [serviceType, setServiceType] = useState("--Select a service--");
     const [weight, setWeight] = useState(0);
 
+    const navigation = useNavigation();
+
     //list of laundry services with price
     const serviceTypeData = [
         { value: "Normal Wash (RM 3/kg)" },
@@ -94,9 +96,6 @@ const OrderForm = () => {
         }
         setServiceType(whatService);
     }
-
-
-    const navigation = useNavigation();
 
     return (
         <View style={stylesWNC.container}>

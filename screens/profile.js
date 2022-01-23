@@ -19,6 +19,7 @@ import {
   doc,
   getFirestore,
   getDoc,
+  Timestamp,
 } from "firebase/firestore";
 
 //Nor Bedriah Binti Munadi
@@ -142,7 +143,7 @@ const Profile = () => {
           style={stylesWNC.CTracker}
           onPress={() => navigation.navigate("OrderForm")}
         >
-          <Text style={stylesWNC.navtext}>Tracker</Text>
+          <Text style={stylesWNC.navtext}>Order</Text>
           <Image
             style={stylesWNC.Tracker}
             source={require("../assets/track.png")}
