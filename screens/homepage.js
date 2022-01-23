@@ -90,12 +90,12 @@ function homepage ({navigation}){
   </View>
   
   {/* from here to below are navigation syntax navigate to related screen */}
-  <TouchableOpacity style={stylesWNC.CLocation} onPress={() => navigation.navigate()}>
+  <TouchableOpacity style={stylesWNC.CLocation} onPress={() => navigation.navigate("Location")}>
     <Text style={stylesWNC.navtext}>Location</Text>
     <Image style={stylesWNC.Location} source={require('../assets/location.png')}/>
   </TouchableOpacity>
 
-  <TouchableOpacity style={stylesWNC.CTracker} onPress={() => navigation.navigate()}>
+  <TouchableOpacity style={stylesWNC.CTracker} onPress={() => navigation.navigate("OrderForm")}>
     <Text style={stylesWNC.navtext}>Tracker</Text>
     <Image style={stylesWNC.Tracker} source={require('../assets/track.png')}/>
   </TouchableOpacity>

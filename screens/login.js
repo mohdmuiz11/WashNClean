@@ -38,12 +38,12 @@ function LoginScreen() {
         console.log("Signed In");
         const user = userCredential.user;
         console.log(user);
+        navigation.replace("Homepage")
       })
       .catch((error) => {
         console.log(error);
         Alert.alert(error.message);
       });
-      navigation.replace("Homepage")
     }
   };
 
