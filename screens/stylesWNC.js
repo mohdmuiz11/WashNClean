@@ -16,11 +16,11 @@ TopTitle: {
 },
 
 //the styles used for Homepage screen  
-textTitle1: {
-    fontSize: 25,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    top: '30%',
+tableTitle: {
+    margin: 2,
+    borderWidth: 1,
+    justifyContent: 'center',
+    height: 25,
 },
 texttable: {
     fontSize: 15,
@@ -32,9 +32,6 @@ tableLayout: {
     borderWidth: 1,
     justifyContent: 'center',
     height: 25,
-},
-gridLayout: {
-    top: '55%',
 },
 logoWNC: {
     top: '150%',
