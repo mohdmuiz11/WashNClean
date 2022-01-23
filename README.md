@@ -65,7 +65,7 @@ The features and functionalities that we include inside our WashNClean applicati
 
 > - Homepage  
 ![Homepage](https://user-images.githubusercontent.com/50144073/147585581-5ce4e586-33d0-4464-96a7-984ee4d53d36.jpg)
-
+After authentication, the user will be directed to WashNClean homepage. The icon at the top screen is FAQ button that will be navigated to FAQ screen when user clicked it, while in the middle part is where the icon wheather located and when clicked, it will direct to Weather screen. In the Homepage screen, in there also where we put the updated prices of our services and at the bottom part is the main navigation part that lead to Location, Tracking and Profile screen.
 > - Order Form  
 ![orderform](https://user-images.githubusercontent.com/50144073/147585604-e5dc1a78-ce7c-46da-9ca6-2c7f6267a133.jpg)
 
@@ -111,13 +111,18 @@ A special application for laundry services
 ### Figure 10 : UI Payment
 
 ## 4.0 Contribution by The Group Members
-NAME | MATRIC NO | USERNAME | CONTRIBUTION
------------- | ------------- | ---------------- | ----------------
-Mohammad Mu'izzuddin | 1918855 | @mohdmuiz11 |
-Nor Bedriah Binti Munadi | 1719890 | @Bedriah | > Implement the Framework of Homepage, FAQ, Weather Snippets and Profile
-> test
-Muhammad Izzuddin bin Suhaili | 1818479 | @Izzuddinsuhaili97 |
-Muhammad Azri Bin Zulkarnain | 1814867 | @Azurei0 |
-Faiq Shahmmy bin Shalizam | 1818897 | @faiqshahmy |
+
+a) Mohammad Mu'izzuddin 
+
+b) Nor Bedriah Binti Munadi  
+> - Design of the UI of Homepage, FAQ, Weather Snippets and Profile
+> - Implement the API for the weather snippets from https://openweathermap.org/
+> - Implement the ScrollView function for UI FAQ screen.
+> - Implement data sending and receiving from OpenWeatherMap through Search Site function in the UI Weather Screen.
+c) Muhammad Izzuddin bin Suhaili 
+
+d) Muhammad Azri Bin Zulkarnain 
+
+e) Faiq Shahmmy bin Shalizam 
 
 ## 5.0 Conclusion
