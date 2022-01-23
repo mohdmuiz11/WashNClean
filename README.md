@@ -91,6 +91,16 @@ A special application for laundry services
 ## 2.0 Overall Design
 
 ## 3.0 Statement of The Functionality and Screenshots of The Application
+### Figure 1 : UI Login
+#### Figure 1.1 : UI SignUp 
+### Figure 2 : UI Homepage
+#### Figure 2.1 : UI Frequently-Asked Question (FAQ)
+#### Figure 2.2 : UI Weather Site
+#### Figure 2.3 : UI Profile
+### Figure 3 : UI Location
+#### Figure 3.1 : UI Feedback Form
+### Figure 4 : UI Order Form
+#### Figure 4.1 : UI Payment
 
 ## 4.0 Contribution by The Group Members
 
