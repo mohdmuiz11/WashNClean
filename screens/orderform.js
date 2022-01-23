@@ -1,3 +1,5 @@
+// Mohammad Mu'izzuddin bin Mohammad Ali 1918855
+
 import React, { useState, useEffect } from "react";
 import {
   Text,
@@ -14,17 +16,9 @@ import moment from "moment";
 import { stylesWNC } from "../screens/stylesWNC";
 import { useNavigation } from "@react-navigation/native";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
-import { getAuth } from "firebase/auth";
-import { firebaseConfig } from "../firebase";
-import { initializeApp } from "firebase/app";
-import {
-  doc,
-  getFirestore,
-  getDoc,
-  QueryDocumentSnapshot,
-  DocumentSnapshot,
-} from "firebase/firestore";
 
+// this function is exclusively for datetimepicker in order to
+// put pickup and delivery time (two instance of datetimepicker)
 function useInput() {
     const [date, setDate] = useState(new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()));
     const [mode, setMode] = useState('date');
@@ -65,6 +59,7 @@ const OrderForm = () => {
     const input = useInput(new Date());
     const input2 = useInput(new Date());
     
+    //some usestate variable to be used
     const [price, setPrice] = useState(0);
     const [totalPrice, setTotalPrice] = useState(0);
     const [serviceType, setServiceType] = useState("--Select a service--");
@@ -80,7 +75,9 @@ const OrderForm = () => {
         { value: "Ironing (RM 2/pc)" },
         { value: "Dry Cleaning (RM 15/pc)" }
       ]
-
+      
+    // calculate price everytime there is some changes to
+    // weight and serviceType
     useEffect(() => {
         let total = price * weight;
         setTotalPrice(total);
@@ -103,6 +100,8 @@ const OrderForm = () => {
             <Text style={styles.title}>Your Order</Text>
             <View style={styles.normalcontainer}>
                 <Text style={styles.subtitle}>What kind of service do you want?</Text>
+
+                {/* dropdown menu */}
                 <Dropdown style={styles.dropdowninput} data={serviceTypeData} value={serviceType} onChangeText={(serviceType, index) => chooseService(serviceType, index)}/>
             </View>
 
@@ -126,6 +125,7 @@ const OrderForm = () => {
 
             <Text style={styles.subtitle}>Schedule your laundry:</Text>
 
+            {/* pickup time scheduling */}
             <View style={styles.rowcontainer}>
                 <Text style={styles.formlabel}>Pickup</Text>
                 <Button
@@ -158,7 +158,7 @@ const OrderForm = () => {
                 )}
             </View>
 
-            {/* delivery */}
+            {/* delivery time scheduling */}
             <View style={styles.rowcontainer2}>
                 <Text style={styles.formlabel}>Delivery</Text>
                 <Button
@@ -190,16 +190,20 @@ const OrderForm = () => {
                     />
                 )}
             </View>
+
+            {/* small notes for schedule, cant be bother with automating this process */}
             <View style={styles.viewsmall}>
                 <Text style={styles.small}>Note: Pickup and delivery time should</Text>
                 <Text style={styles.small}>be at least between 2 hours</Text>
             </View>
             
+            {/* total price, calculated automatically */}
             <View style={styles.rowcontainer}>
                 <Text style={styles.priceTitle}>Total Price:</Text>
                 <Text style={styles.price}>RM {totalPrice}</Text>
             </View>
             
+            {/* proceed to payment page */}
             <Button
                 buttonStyle={{ backgroundColor: "green", borderWidth: 2, borderRadius: 30 }}
                 containerStyle={{ width: 200, margin: 5 }}
@@ -210,6 +214,7 @@ const OrderForm = () => {
             />
 
 
+            {/* Navigation buttons */}
             <TouchableOpacity style={stylesWNC.CHome}  onPress={() => navigation.navigate("Homepage")}>  
                 <Text style={stylesWNC.navtext}>Home</Text>
                 <Image style={stylesWNC.Homepage} source={require('../assets/home.png')} />
@@ -235,6 +240,7 @@ const OrderForm = () => {
     )
 }
 
+//custom stylesheet for this screen
 const styles = StyleSheet.create({
     title: {
         fontSize: 25,
