@@ -82,7 +82,7 @@ const OrderForm = () => {
     useEffect(() => {
         let total = price * weight;
         setTotalPrice(total);
-    }, [weight]);
+    }, [weight, serviceType]);
 
     const chooseService = (whatService, index) => {
         switch(index){
@@ -191,6 +191,10 @@ const OrderForm = () => {
                     />
                 )}
             </View>
+            <View style={styles.viewsmall}>
+                <Text style={styles.small}>Note: Pickup and delivery time should</Text>
+                <Text style={styles.small}>be at least between 2 hours</Text>
+            </View>
             
             <View style={styles.rowcontainer}>
                 <Text style={styles.priceTitle}>Total Price:</Text>
@@ -272,6 +276,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: "baseline",
         marginTop: -15,
+        marginBottom: -15,
         // justifyContent: "space-between",
         // marginHorizontal: 20
     },
@@ -287,6 +292,13 @@ const styles = StyleSheet.create({
         width: "100%",
         height: 50,
     },
+    viewsmall: {
+        marginBottom: 10,
+        alignItems: "center"
+    },
+    small: {
+        fontSize: 13,
+    }
 });
 
 export default OrderForm;
