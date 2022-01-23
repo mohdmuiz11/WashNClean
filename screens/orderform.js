@@ -1,22 +1,19 @@
-import React, { useState } from "react";
-import Payment from './payment';
+import React, { useState, useEffect } from "react";
 import {
   Text,
   View,
   Image,
   TouchableOpacity,
-  Button,
   StyleSheet,
-  Alert,
-  ActivityIndicator,
-  ScrollView,
-  Dimensions,
 } from "react-native";
+import { Button } from "react-native-elements";
 import DateTimePicker from '@react-native-community/datetimepicker';
 import { Dropdown } from 'react-native-material-dropdown-v2';
-import { Card, colors } from "react-native-elements";
+import { Input } from "react-native-elements";
+import moment from "moment";
 import { stylesWNC } from "../screens/stylesWNC";
 import { useNavigation } from "@react-navigation/native";
+import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import { getAuth } from "firebase/auth";
 import { firebaseConfig } from "../firebase";
 import { initializeApp } from "firebase/app";
@@ -28,13 +25,52 @@ import {
   DocumentSnapshot,
 } from "firebase/firestore";
 
-const OrderForm = () => {
-
-    const [date, setDate] = useState(new Date(1598051730000));
+function useInput() {
+    const [date, setDate] = useState(new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()));
     const [mode, setMode] = useState('date');
     const [show, setShow] = useState(false);
-    const [serviceType, setServiceType] = useState("--Select a service--");
 
+    const onChange = (event, selectedDate) => {
+        const currentDate = selectedDate || date;
+        setShow(Platform.OS === 'ios');
+        setDate(currentDate);
+    };
+    
+    const showMode = (currentMode) => {
+        setShow(true);
+        setMode(currentMode);
+    };
+
+    const showDatepicker = () => {
+        showMode('date');
+    };
+
+    const showTimepicker = () => {
+        showMode('time');
+    };
+
+    return {
+        date,
+        showDatepicker,
+        showTimepicker,
+        show,
+        mode,
+        onChange
+    }
+
+}
+
+const OrderForm = () => {
+    //for two datetimepicker
+    const input = useInput(new Date());
+    const input2 = useInput(new Date());
+    
+    const [price, setPrice] = useState(0);
+    const [totalPrice, setTotalPrice] = useState(0);
+    const [serviceType, setServiceType] = useState("--Select a service--");
+    const [weight, setWeight] = useState(0);
+
+    //list of laundry services with price
     const serviceTypeData = [
         { value: "Normal Wash (RM 3/kg)" },
         { value: "Dry+Fold Only (RM 1.80/kg)" },
@@ -43,24 +79,28 @@ const OrderForm = () => {
         { value: "Dry Cleaning (RM 15/pc)" }
       ]
 
-    const onChange = (event, selectedDate) => {
-        const currentDate = selectedDate || date;
-        setShow(Platform.OS === 'ios');
-        setDate(currentDate);
-      };
-    
-      const showMode = (currentMode) => {
-        setShow(true);
-        setMode(currentMode);
-      };
-    
-      const showDatepicker = () => {
-        showMode('date');
-      };
-    
-      const showTimepicker = () => {
-        showMode('time');
-      };
+    useEffect(() => {
+    }, []);
+
+    const calculatePrice = (whatWeight) => {
+        console.log(whatWeight)
+        setWeight(whatWeight);
+        let total = price * weight;
+        setTotalPrice(total);
+        console.log(totalPrice)
+    }
+
+    const chooseService = (whatService, index) => {
+        switch(index){
+            case 0: setPrice(3); break;
+            case 1: setPrice(1.8); break;
+            case 2: setPrice(3); break;
+            case 3: setPrice(2); break;
+            case 4: setPrice(15); break;
+        }
+        setServiceType(whatService);
+    }
+
 
     const navigation = useNavigation();
 
@@ -68,35 +108,109 @@ const OrderForm = () => {
         <View style={stylesWNC.container}>
             <Text style={stylesWNC.TopTitle}>WashNClean</Text>
             <Text style={styles.title}>Your Order</Text>
-            <View>
+            <View style={styles.normalcontainer}>
                 <Text style={styles.subtitle}>What kind of service do you want?</Text>
-                <Dropdown style={styles.dropdowninput} data={serviceTypeData} value={serviceType} onChangeText={(serviceType) => setServiceType(serviceType)}/>
+                <Dropdown style={styles.dropdowninput} data={serviceTypeData} value={serviceType} onChangeText={(serviceType, index) => chooseService(serviceType, index)}/>
             </View>
-            <Text>what</Text>
 
-            <View>
-                <Button onPress={showDatepicker} title="Show date picker!" />
+            {/* Input weight laundry */}
+            <View style={styles.normalcontainer}>
+                <Text style={styles.subtitle}>How much weight is your laundry?</Text>
+                <Input
+                    containerStyle={{alignSelf: "center", marginBottom:-30}}
+                    disabledInputStyle={{ background: "#ddd" }}
+                    inputContainerStyle={{width: 60}}
+                    keyboardType='numeric'
+                    maxLength={2}
+                    rightIcon={
+                        <Icon name="weight-kilogram" size={30} />
+                    }
+                    placeholder="0"
+                    value={weight}
+                    onChangeText={(weight) => calculatePrice(weight)}
+                    />
             </View>
-            <View>
-                <Button onPress={showTimepicker} title="Show time picker!" />
-            </View>
-            {show && (
-                <DateTimePicker
-                testID="dateTimePicker"
-                value={date}
-                mode={mode}
-                is24Hour={false}
-                display="default"
-                onChange={onChange}
-                //set minimum date by today
-                minimumDate={new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate())}
+
+            <Text style={styles.subtitle}>Schedule your laundry:</Text>
+
+            <View style={styles.rowcontainer}>
+                <Text style={styles.formlabel}>Pickup</Text>
+                <Button
+                    buttonStyle={{}}
+                    containerStyle={{ margin: 5 }}
+                    onPress={input.showDatepicker}
+                    title={moment(input.date).format("ddd, Do MMM")}
+                    titleStyle={{ marginHorizontal: 5, fontSize: 15}}
+                    type="outline"
                 />
-             <Button
-               title="Pay Now"
-               onPress={() => navigation.navigate(Payment)}
-                 /> 
-            )}
+                <Button
+                    buttonStyle={{}}
+                    containerStyle={{ margin: 5 }}
+                    onPress={input.showTimepicker}
+                    title={moment(input.date).format("LT")}
+                    titleStyle={{ marginHorizontal: 5, fontSize: 15}}
+                    type="outline"
+                />
+                {input.show && (
+                    <DateTimePicker
+                        testID="dateTimePicker1"
+                        value={input.date}
+                        mode={input.mode}
+                        is24Hour={false}
+                        display="default"
+                        onChange={input.onChange}
+                        //set minimum date by today
+                        minimumDate={new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate())}
+                    />
+                )}
+            </View>
 
+            {/* delivery */}
+            <View style={styles.rowcontainer2}>
+                <Text style={styles.formlabel}>Delivery</Text>
+                <Button
+                    buttonStyle={{}}
+                    containerStyle={{ margin: 5 }}
+                    onPress={input2.showDatepicker}
+                    title={moment(input2.date).format("ddd, Do MMM")}
+                    titleStyle={{ marginHorizontal: 5, fontSize: 15}}
+                    type="outline"
+                />
+                <Button
+                    buttonStyle={{}}
+                    containerStyle={{ margin: 5 }}
+                    onPress={input2.showTimepicker}
+                    title={moment(input2.date).format("LT")}
+                    titleStyle={{ marginHorizontal: 5, fontSize: 15}}
+                    type="outline"
+                />
+                {input2.show && (
+                    <DateTimePicker
+                        testID="dateTimePicker1"
+                        value={input2.date}
+                        mode={input2.mode}
+                        is24Hour={false}
+                        display="default"
+                        onChange={input2.onChange}
+                        //set minimum date by today
+                        minimumDate={new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate())}
+                    />
+                )}
+            </View>
+            
+            <View style={styles.rowcontainer}>
+                <Text style={styles.priceTitle}>Total Price:</Text>
+                <Text style={styles.price}>RM {totalPrice}</Text>
+            </View>
+            
+            <Button
+                buttonStyle={{ backgroundColor: "green", borderWidth: 2, borderRadius: 30 }}
+                containerStyle={{ width: 200, margin: 5 }}
+                title="PAY NOW"
+                onPress={() => navigation.navigate("Payment")}
+                titleStyle={{ marginHorizontal: 10, fontSize: 20}}
+                type="solid"
+            />
 
 
             <TouchableOpacity style={stylesWNC.CHome}  onPress={() => navigation.navigate("Homepage")}>  
@@ -108,6 +222,8 @@ const OrderForm = () => {
                 <Text style={stylesWNC.navtext}>Location</Text>
                 <Image style={stylesWNC.Location} source={require('../assets/location.png')}/>
             </TouchableOpacity>
+
+            {/* cant be bothered to utilized navigation stack */}
 
             <View style={stylesWNC.CTracker}>
                 <Text style={stylesWNC.navtext}>Order</Text>
@@ -129,14 +245,44 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         marginBottom: 25,
     },
+    button: {
+        color: 'black'
+    },
     subtitle: {
         fontSize: 15,
         fontWeight: 'bold',
     },
+    priceTitle: {
+        fontSize: 30,
+        fontWeight: "bold",
+        marginRight: "10%"
+    },
+    price: {
+        fontSize: 30,
+        fontWeight: "bold",
+        color: "blue"
+    },
+    formlabel: {
+      fontSize: 15,
+      fontWeight: "bold",
+    },
     rowcontainer: {
-        flex: 0.1,
+        flex: 0.2,
         flexDirection: "row",
-        justifyContent: "space-between",
+        alignItems: "baseline"
+        // justifyContent: "space-between",
+        // marginHorizontal: 20
+    },
+    rowcontainer2: {
+        flex: 0.2,
+        flexDirection: "row",
+        alignItems: "baseline",
+        marginTop: -15,
+        // justifyContent: "space-between",
+        // marginHorizontal: 20
+    },
+    normalcontainer:{
+        marginBottom: 20,
     },
     dropdowninput: {
         fontWeight: "bold",
