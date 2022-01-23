@@ -106,6 +106,11 @@ b) Nor Bedriah Binti Munadi
 c) Muhammad Izzuddin bin Suhaili 
 
 d) Muhammad Azri Bin Zulkarnain 
+> - UI design for Login, Sign Up
+> - Implementation of Firebase API from firebase.google.com https://firebase.google.com/
+> - Implementing Firebase Authentication for user account Sign Up and Login
+> - Implementation of Firebase Firestore for data storage in Sign Up page, Feedback page.
+> - Fetching user data from Firebase Firestore for display in Profile page 
 
 e) Faiq Shahmmy bin Shalizam 
 
