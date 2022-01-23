@@ -9,6 +9,9 @@ import LoginScreen from "./screens/login";
 import Feedback from "./screens/feedback";
 import OrderForm from "./screens/orderform";
 import Location from "./screens/location";
+import Payment from "./screens/payment";
+import PaymentConfirmation from "./screens/paymentconfirmation";
+import Weather from "./screens/Weather";
 
 const Stack = createStackNavigator();
 
@@ -37,10 +40,13 @@ const MyStack = () => {
         />
         <Stack.Screen name="Homepage" component={homepage} />
         <Stack.Screen name="Profile" component={profile} />
+        <Stack.Screen name="Weather" component={Weather} />
         <Stack.Screen name="Faq" component={Faq} />
         <Stack.Screen name="Feedback" component={Feedback}/>
         <Stack.Screen name="OrderForm" component={OrderForm} />
         <Stack.Screen name="Location" component={Location} />
+        <Stack.Screen name="Payment" component={Payment} />
+        <Stack.Screen name="PaymentConfirmation" component={PaymentConfirmation} />
       </Stack.Navigator>
     </NavigationContainer>
   );

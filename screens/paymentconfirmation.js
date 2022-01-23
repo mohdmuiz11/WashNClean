@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { Text, View,Button,Image,TextInput,TouchableOpacity, StyleSheet,Alert } from 'react-native';
 import Constants from 'expo-constants';
+import { useNavigation } from "@react-navigation/native";
+import homepage from './homepage';
 
 
 
@@ -23,7 +25,7 @@ class PaymentConfirmation extends React.Component  {
 
        <Button
         title="Payment Confirmed"
-        onPress={() => Alert.alert('Thank you!')}
+        onPress={() => navigation.navigate(homepage)}
       /> 
 
 
