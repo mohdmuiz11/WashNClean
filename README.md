@@ -134,6 +134,7 @@ b) Nor Bedriah Binti Munadi
 c) Muhammad Izzuddin bin Suhaili 
 >- UI design for Location and Feedback pages.
 >- Implement API for Map in Location page.
+>- Implement custom marker with title to indicate the location
 
 
 d) Muhammad Azri Bin Zulkarnain 
